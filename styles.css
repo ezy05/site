@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden; /* Ascunde derularea orizontală */
 }
 
 /* Stilizarea pentru header */
@@ -26,30 +27,8 @@ body {
 }
 
 header .logo {
-    height: 50px;
+    height: 100px;
     max-width: 100%;
-}
-
-.reviews {
-    text-align: center;
-    margin: 0 20px;
-    flex-grow: 1;
-}
-
-.reviews h2, .reviews p {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-}
-
-.stars {
-    margin-top: 5px;
-}
-
-.stars span {
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFD700;
 }
 
 nav ul {
@@ -246,13 +225,21 @@ footer .social-media a:hover img {
     }
     
     nav ul {
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-wrap: wrap;  /* Allow items to wrap */
+        justify-content: center;  /* Center the items */
+        gap: 5px;  /* Adjust gap to fit more items */
+        padding: 0;  /* Remove padding for better alignment */
     }
 
+    nav a {
+        padding: 10px 15px;  /* Increase padding for better touch target */
+        white-space: nowrap;  /* Prevent text wrapping */
+    }
+
+    /* Ajustează dimensiunile pentru mobil */
     .header-image-container {
-        height: 35vh;
-        margin-top: 90px; /* Ajustăm margin-top pentru mobil */
+        height: 40vh; /* Diminuarea înălțimii pentru a se potrivi mai bine pe ecranele mai mici */
+        margin-top: 120px; /* Creșteți margin-top pentru a oferi mai mult spațiu */
     }
 
     .overlay h1, .overlay h2 {
