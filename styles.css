@@ -1,0 +1,268 @@
+/* Fundalul general al paginii */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover; /* Acoperire completă a ecranului */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Ascunde derularea orizontală */
+}
+
+/* Stilizarea pentru header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+header .logo {
+    height: 100px;
+    max-width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Imaginea de sub header */
+.header-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 50vh;
+    margin-top: 100px; /* Creștem margin-top pentru a lăsa mai mult spațiu sub header */
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.5); /* Strat opac */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.overlay h1, .overlay h2 {
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+}
+
+.overlay button {
+    background-color: white;
+    color: #4CAF50;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.overlay button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+/* Secțiunea Highlights */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    width: 100%;
+    color: white;
+}
+
+.highlights div {
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 30%;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Secțiunea About */
+.about {
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.about-btn {
+    background-color: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.about-btn:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+/* Secțiunea Design Logo */
+.design-logo {
+    text-align: left;
+    margin-top: 40px;
+    padding: 0 50px;
+    width: 100%;
+}
+
+.design-logo h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+
+.design-logo .logo-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.design-logo .logo-options img {
+    width: 23%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.design-logo .logo-options img:first-child {
+    margin-left: 2%;
+}
+
+.design-logo .logo-options img:last-child {
+    margin-right: 2%;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .social-media {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-media img {
+    height: 25px;
+    width: 25px;
+}
+
+footer .social-media a:hover img {
+    opacity: 0.8;
+}
+
+/* Media Queries pentru responsivitate */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;  /* Allow items to wrap */
+        justify-content: center;  /* Center the items */
+        gap: 5px;  /* Adjust gap to fit more items */
+        padding: 0;  /* Remove padding for better alignment */
+    }
+
+    nav a {
+        padding: 10px 15px;  /* Increase padding for better touch target */
+        white-space: nowrap;  /* Prevent text wrapping */
+    }
+
+    /* Ajustează dimensiunile pentru mobil */
+    .header-image-container {
+        height: 40vh; /* Diminuarea înălțimii pentru a se potrivi mai bine pe ecranele mai mici */
+        margin-top: 120px; /* Creșteți margin-top pentru a oferi mai mult spațiu */
+    }
+
+    .overlay h1, .overlay h2 {
+        font-size: 1.2em;
+    }
+
+    .design-logo .logo-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .design-logo .logo-options img {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .social-media {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
